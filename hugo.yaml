@@ -3,15 +3,18 @@ languageCode: en-us
 title: My New Hugo Site
 menus:
   main:
-    - name: Home
+    - name: "Blog"
       pageRef: /
-      weight: 10
-    - name: Posts
-      pageRef: /posts
-      weight: 20
-    - name: Tags
-      pageRef: /tags
-      weight: 30
+      weight: 1
+
+    - name: "Projects"
+      pageRef: "/projects"
+      weight: 2
+
+    - name: "Contact"
+      pageRef: "/contact"
+      weight: 3
+
 module:
   hugoVersion:
     extended: false

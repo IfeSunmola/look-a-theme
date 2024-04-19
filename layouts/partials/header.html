@@ -1,2 +1,38 @@
-<h1>{{ site.Title }}</h1>
-{{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+<nav class=" container-md navbar navbar-expand-lg bg-primary"
+		 data-bs-theme="dark">
+	<div class="container-fluid">
+		<a class="navbar-brand fs-4" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+						data-bs-target="#navbarNav" aria-controls="navbarNav"
+						aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="fs-4 navbar-nav d-lg-flex justify-content-lg-end w-100 gap-lg-4">
+
+				{{ range site.Menus.main }}
+				<li class="nav-item">
+					<a class="nav-link-text" href="{{ .URL }}">{{ .Name }}</a>
+				</li>
+				{{ end }}
+
+				{{/*
+				<li class="nav-item">
+					<div class="input-group">
+						<input type="text" class="form-control form-control fs-4"
+									 placeholder="Find Something ..."
+									 aria-label="Search Field" aria-describedby="Search field">
+						<button
+								class="btn btn-outline-secondary d-flex flex-row justify-content-center align-items-center"
+								type="submit">
+							<span class="material-symbols-outlined">search</span>
+						</button>
+					</div>
+				</li>
+				*/}}
+			</ul>
+		</div>
+	</div>
+</nav>
