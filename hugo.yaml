@@ -1,23 +1,23 @@
 baseURL: https://example.org/
 languageCode: en-us
-title: My New Hugo Site
+title: YourSiteName
 menus:
-  main:
-    - name: "Blog"
+  nav:
+    - name: "Nav1"
       pageRef: /
       weight: 1
 
-    - name: "Projects"
-      pageRef: "/projects"
+    - name: "Nav2"
+      pageRef: "/nav-2"
       weight: 2
 
-    - name: "Contact"
-      pageRef: "/contact"
+    - name: "Nav3"
+      pageRef: "/nav-3"
       weight: 3
 
 params:
   dateFormat: ":date_medium"
-  
+
 module:
   hugoVersion:
     extended: false
