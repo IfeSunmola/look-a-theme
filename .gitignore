@@ -1,0 +1,7 @@
+*.lock
+node_modules
+*.css
+.idea
+public
+resources
+*.map
