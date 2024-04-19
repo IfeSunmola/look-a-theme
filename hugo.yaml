@@ -15,6 +15,9 @@ menus:
       pageRef: "/contact"
       weight: 3
 
+params:
+  dateFormat: ":date_medium"
+  
 module:
   hugoVersion:
     extended: false
