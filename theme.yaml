@@ -1,0 +1,22 @@
+name: Theme name
+license: MIT
+licenselink: https://github.com/owner/repo/LICENSE
+description: Theme description
+
+# The home page of the theme, where the source can be found
+homepage: https://github.com/owner/repo
+
+# If you have a running demo of the theme
+demosite: https://owner.github.io/repo
+
+# Taxonomy terms
+tags:
+  - blog
+  - company
+features:
+  - some
+  - awesome
+  - features
+author:
+  name: Ife Sunmola
+  homepage: Your website
