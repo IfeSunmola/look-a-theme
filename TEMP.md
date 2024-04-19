@@ -27,4 +27,30 @@ layout: "contact"
 It tells hugo to look in the `standalone` directory, and use the `contact-form` html file.
 
 **Unpredicatable/lots of mental gymnastics because of hugo's fall through/look up order
-behaviour** 
+behaviour**
+
+
+
+--- 
+
+## Taxonomies
+
+```     
+Actor                    <- Taxonomy
+    Bruce Willis         <- Term
+        The Sixth Sense  <- Value
+        Unbreakable      <- Value
+        Moonrise Kingdom <- Value
+    Samuel L. Jackson    <- Term
+        Unbreakable      <- Value
+        The Avengers     <- Value
+        xXx              <- Value
+--------------------------------------------------------        
+Tag               <- Taxonomy
+    Java          <- Term
+        Java 1    <- Value
+        Java 2    <- Value
+    SQL           <- Term
+        SQL 1     <- Value
+        SQL 2     <- Value 
+```
