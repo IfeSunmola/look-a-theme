@@ -1,28 +1,12 @@
 {{ define "main" }}
 <article class="card p-4 d-flex flex-column row-gap-2">
-	<div class="d-flex column-gap-3">
-		{{ with .GetTerms "tags" }}
-		{{ range . }}
-		<a href="{{ .RelPermalink }}" class="btn btn-primary">
-			{{ .LinkTitle }}
-		</a>
-		{{ end }}
-		{{ end }}
-	</div>
+	{{ partial "page-tags.html" . }}
 
 	<h1>{{ .Title }}</h1>
 
 	<p>{{ .Summary }}</p>
 
-	<div class="d-flex gap-2">
-		{{ if eq .Params.inProgress true }}
-		<span class="material-symbols-outlined">pending</span>
-		<span>In Progress</span>
-		{{ else }}
-		<span class="material-symbols-outlined">check_circle</span>
-		<span>Completed</span>
-		{{ end }}
-	</div>
+	{{ partial "project-info.html" . }}
 
 	<div class="border-bottom mt-2 mb-2"></div>
 
