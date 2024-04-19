@@ -1,0 +1,36 @@
+{{ define "main" }}
+<div class="row g-4">
+	{{ range .RegularPages}}
+	<div class="col-12">
+		<article class="card p-3">
+			<div class="d-flex column-gap-3">
+				{{ with .GetTerms "tags" }}
+				{{ range . }}
+				<a href="{{ .RelPermalink }}" class="btn btn-primary">
+					{{ .LinkTitle }}
+				</a>
+				{{ end }}
+				{{ end }}
+			</div>
+
+			<a href=" {{ .Permalink }}" class="text-white text-decoration-none mt-2">
+				<h2>{{ .Title }}</h2>
+			</a>
+
+			<p>{{ .Summary }}</p>
+
+			<div class="d-flex gap-2">
+				{{ if eq .Params.inProgress true }}
+				<span class="material-symbols-outlined">pending</span>
+				<span>In Progress</span>
+				{{ else }}
+				<span class="material-symbols-outlined">check_circle</span>
+				<span>Completed</span>
+				{{ end }}
+			</div>
+		</article>
+	</div>
+
+	{{ end }}
+</div>
+{{ end }}
