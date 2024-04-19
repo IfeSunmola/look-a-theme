@@ -1,0 +1,45 @@
+{{ define "main" }}
+<h1 class="text-center">Get in touch with me</h1>
+
+<form class="row g-3">
+	<div class="col-12 col-lg-6">
+		<div class="form-floating">
+			<input type="text" class="form-control" id="name"
+						 placeholder="Benjamin Tennyson">
+			<label for="name">Name</label>
+		</div>
+	</div>
+
+	<div class="col-12 col-lg-6">
+		<div class="form-floating w-100">
+			<input type="email" class="form-control" id="email"
+						 placeholder="me@domain.com">
+			<label for="email">Email</label>
+		</div>
+	</div>
+
+	<div class="col-12">
+		<div class="form-floating">
+			<input type="text" class="form-control" id="subject"
+						 placeholder="me@domain.com">
+			<label for="subject">What's this message about?</label>
+		</div>
+	</div>
+
+	<div class="col-12">
+		<div class="form-floating">
+			<textarea class="form-control" id="message" style="height: 300px;"
+								placeholder="Hey, I would like to discuss..."></textarea>
+			<label for="message">Message</label>
+		</div>
+	</div>
+
+	<div class="col-12">
+		<div class="text-center">
+			<a type="submit" class="btn btn-primary btn-lg">Send</a>
+		</div>
+	</div>
+
+</form>
+
+{{ end }}
