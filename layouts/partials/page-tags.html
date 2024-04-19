@@ -1,0 +1,9 @@
+<div class="d-flex column-gap-3">
+	{{ with .GetTerms "tags" }}
+	{{ range . }}
+	<a href="{{ .RelPermalink }}" class="btn btn-primary">
+		{{ .LinkTitle }}
+	</a>
+	{{ end }}
+	{{ end }}
+</div>

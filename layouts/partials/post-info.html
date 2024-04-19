@@ -1,0 +1,13 @@
+<div class="d-flex gap-2">
+	<span class="material-symbols-outlined">edit</span>
+	<time datetime="{{ .Date }}">
+		{{ .Date | time.Format .Site.Params.dateFormat }}
+	</time>
+	{{ if ne .Date .Lastmod }}
+		<span>|</span>
+		<span class="material-symbols-outlined">history</span>
+		<time datetime="{{ .Lastmod }}">
+			{{ .Lastmod | time.Format .Site.Params.dateFormat }}
+		</time>
+	{{ end }}
+</div>

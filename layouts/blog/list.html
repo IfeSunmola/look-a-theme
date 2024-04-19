@@ -3,15 +3,7 @@
 	{{ range (.Paginate (where .RegularPagesRecursive "Type" "blog" )).Pages }}
 	<div class="col-12">
 		<article class="card p-3">
-			<div class="d-flex column-gap-3">
-				{{ with .GetTerms "tags" }}
-				{{ range . }}
-				<a href="{{ .RelPermalink }}" class="btn btn-primary">
-					{{ .LinkTitle }}
-				</a>
-				{{ end }}
-				{{ end }}
-			</div>
+			{{ partial "page-tags.html" . }}
 
 			<a href=" {{ .Permalink }}" class="text-white text-decoration-none mt-2">
 				<h2>{{ .Title }}</h2>
@@ -19,15 +11,7 @@
 
 			<p>{{ .Summary }}</p>
 
-			<div class="d-flex gap-2">
-				<span class="material-symbols-outlined">edit</span>
-				<span>{{ .Date | time.Format .Site.Params.dateFormat }}</span>
-				{{ if ne .Date .Lastmod }}
-				<span>|</span>
-				<span class="material-symbols-outlined">history</span>
-				<span>{{ .Lastmod  | time.Format .Site.Params.dateFormat }} </span>
-				{{ end }}
-			</div>
+			{{ partial "post-info.html" . }}
 		</article>
 	</div>
 	{{ end }}
