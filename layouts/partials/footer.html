@@ -1,1 +1,17 @@
-<p>Copyright {{ now.Year }}. All rights reserved.</p>
+<p class="text-center">
+	&copy;
+	{{ now.Format "2006" }}
+	Ife Sunmola
+</p>
+
+<ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+	{{ range .Site.Params.socials }}
+	{{ $logo := resources.Get .image }}
+	<li class="ms-3">
+		<a class="text-body-secondary" href="{{ .url }}" target="_blank">
+			<img src="{{ $logo.Permalink }}" alt="{{ .name }}" width="24" height="24"
+					 loading="lazy">
+		</a>
+	</li>
+	{{ end }}
+</ul>

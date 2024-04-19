@@ -17,6 +17,18 @@ menus:
 
 params:
   dateFormat: ":date_medium"
+  socials:
+    - name: "GitHub Logo"
+      url: "https://github.com/"
+      image: "images/github-logo.svg"
+
+    - name: "LinkedIn Logo"
+      url: "https://www.linkedin.com/"
+      image: "images/linkedin-logo.svg"
+
+    - name: "Facebook Logo"
+      url: "https://www.facebook.com/"
+      image: "images/facebook-logo.svg"
 
 module:
   hugoVersion:
