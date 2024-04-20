@@ -1,20 +1,28 @@
 {{ define "main" }}
 <div class="row g-4">
-	{{ range .RegularPages}}
-	<div class="col-12">
-		<article class="card p-3">
-			{{ partial "page-tags.html" . }}
+	{{ $allProjects := .RegularPages }}
 
-			<a href=" {{ .Permalink }}" class="text-white text-decoration-none mt-2">
-				<h2>{{ .Title }}</h2>
-			</a>
+	{{ if le (len $allProjects) 0 }}
+	<p class="text-center d-flex justify-content-center align-items-center fs-2">
+		No projects yet 😔 ... THERE'S NO TIME!!!
+	</p>
+	{{ else }}
+		{{ range $allProjects}}
+		<div class="col-12">
+			<article class="card p-3">
+				{{ partial "page-tags.html" . }}
 
-			<p>{{ .Summary }}</p>
+				<a href=" {{ .Permalink }}" class="text-white text-decoration-none mt-2">
+					<h2>{{ .Title }}</h2>
+				</a>
 
-		{{ partial "project-info.html" . }}
-		</article>
-	</div>
+				<p>{{ .Summary }}</p>
 
+				{{ partial "project-info.html" . }}
+			</article>
+		</div>
+		{{ end }}
 	{{ end }}
+
 </div>
 {{ end }}

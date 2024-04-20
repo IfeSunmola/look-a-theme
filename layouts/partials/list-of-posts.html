@@ -1,5 +1,11 @@
 <div class="row g-4">
-	{{ range (.Paginate (where .RegularPagesRecursive "Type" "blog" )).Pages }}
+	{{ $allPosts := (.Paginate (where .RegularPagesRecursive "Type" "blog" )).Pages }}
+	{{ if le (len $allPosts) 0 }}
+	<p class="text-center d-flex justify-content-center align-items-center fs-2">
+		No posts yet ... Check back later?
+	</p>
+	{{ else }}
+	{{ range $allPosts }}
 	<div class="col-12">
 		<article class="card p-3">
 			{{ partial "page-tags.html" . }}
@@ -15,4 +21,5 @@
 	</div>
 	{{ end }}
 	{{ partial "pagination.html" . }}
+	{{ end }}
 </div>
