@@ -38,9 +38,9 @@
 
 	{{ with .Site.Params.cloudflare }}
 	{{ if eq hugo.Environment "development" }}
-		<div class="cf-turnstile" data-sitekey="{{ .dev.turnstileSiteKey }}"></div>
+		{{/* <div class="cf-turnstile" data-sitekey="{{ .dev.turnstileSiteKey }}"></div>*/}}
 	{{ else }}
-		<div class="cf-turnstile" data-sitekey="{{ .prod.turnstileSiteKey }}"></div>
+		{{/*<div class="cf-turnstile" data-sitekey="{{ .prod.turnstileSiteKey }}"></div>*/}}
 	{{ end }}
 
 	{{ end }}
