@@ -16,7 +16,9 @@
 			</main>
 
 			<aside class="col-12 col-lg-4 d-flex flex-column gap-5">
-
+				{{ block "aside" . }}
+				{{ partial "all-tags.html" . }}
+				{{ end }}
 			</aside>
 		</div>
 

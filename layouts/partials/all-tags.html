@@ -1,0 +1,10 @@
+<div class="card p-3">
+	<h2 class="text-center">Tags</h2>
+	<div class="d-flex row-gap-2 column-gap-2 flex-wrap justify-content-evenly">
+		{{ range .Site.Taxonomies.tags }}
+		<a href="{{ .Page.Permalink }}" class="btn btn-primary">
+			{{ .Page.Title }}
+		</a>
+		{{ end }}
+	</div>
+</div>
