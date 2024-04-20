@@ -1,8 +1,35 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
+<title>
+	{{ if .IsHome }}
+		{{ site.Title }}
+	{{ else }}
+		{{ printf "%s | %s" .Title site.Title }}
+	{{ end }}
+</title>
+
 {{ partialCached "external/styles.html" . }}
+
+<!--Start SEO-->
+{{/* https://cloudcannon.com/tutorials/hugo-seo-best-practices/ */}}
+{{- if .IsHome -}}
+	<meta name="description" content="{{ site.Params.seo.Description }}" />
+{{- else -}}
+	{{ with .Params.Seo }}
+		<meta name="description" content="{{ .Description }}" />
+
+		{{ if .NoIndex }}
+			<meta name="robots" content="noindex">
+		{{ end }}
+	{{ end }}
+{{- end }}
+
+<link rel="canonical" href="{{ .Permalink }}" />
+
+<!--End SEO-->
+
+
 <!--Created Icon-->
 <link rel="stylesheet"
 			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>

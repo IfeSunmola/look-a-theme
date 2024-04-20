@@ -30,6 +30,9 @@ params:
       url: "https://www.facebook.com/"
       image: "images/facebook-logo.svg"
 
+  seo:
+    description: "Site description goes here"
+
 taxonomies:
   tag: tags
 
