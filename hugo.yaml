@@ -29,7 +29,10 @@ params:
     - name: "Facebook Logo"
       url: "https://www.facebook.com/"
       image: "images/facebook-logo.svg"
-
+  cloudflare:
+    # https://developers.cloudflare.com/turnstile/troubleshooting/testing/
+    dev:
+      turnstileSiteKey: "1x00000000000000000000AA" # For testing, provided by cloudflare
   seo:
     description: "Site description goes here"
 
