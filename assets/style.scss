@@ -87,6 +87,11 @@ $pagination-active-border-color: tint-color($pagination-active-bg, 35%);
   @extend .text-white
 }
 
+p, ul { // specifying so code blocks don't get affected
+  @extend .lh-lg; // line height
+}
+
+
 // all except last child of #recent-posts-item
 #recent-posts-item {
   @extend .pb-2;
@@ -109,10 +114,6 @@ $pagination-active-border-color: tint-color($pagination-active-bg, 35%);
     @extend .text-light;
     @extend .p-2;
   }
-}
-
-#markdown-content p, ul { // specifying so code blocks don't get affected
-  @extend .lh-lg;
 }
 
 #markdown-content pre {

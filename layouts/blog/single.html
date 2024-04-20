@@ -10,17 +10,6 @@
 
 	<div class="border-bottom mt-2 mb-2"></div>
 
-	{{ if eq true .Params.displayToc }}
-	<div class="d-flex flex-column gap-2" id="table-of-content">
-		<h2>Table of Contents</h2>
-		<div id="content">
-			{{ .TableOfContents }}
-		</div>
-	</div>
-	{{ end }}
-
-	<article id="markdown-content">
-		{{ .Content }}
-	</article>
+	{{ partial "markdown-content.html" . }}
 </article>
 {{ end }}
