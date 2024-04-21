@@ -54,3 +54,13 @@ Tag               <- Taxonomy
         SQL 1     <- Value
         SQL 2     <- Value 
 ```
+
+---
+
+## Archetypes
+
+1. Use the default archetype when creating a new directory like /content/blog/ or
+   /content/projects/
+    1. `hugo new content series/_index.md`
+2. Create new tag with the tags archetype:
+    1. `hugo new content tags/sql/_index.md`
