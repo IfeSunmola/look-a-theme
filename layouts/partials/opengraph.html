@@ -11,9 +11,14 @@
 	<meta property="og:title" content="{{ . }}">
 {{- end }}
 
-{{- with or .Params.OpenGraph.Description | plainify }}
-	<meta property="og:description" content="{{ . }}">
-{{- end }}
+{{- if or .IsPage .IsSection}}
+	<meta property="og:description" content="{{ .Params.openGraph.description }}">
+{{ else if .IsHome }}
+	<meta property="og:description" content="{{ site.Params.openGraph.description }}">
+{{ end }}
+
+
+
 
 {{- with site.Params.openGraph.siteImage | absURL }}
 	<meta property="og:image" content="{{ . }}">

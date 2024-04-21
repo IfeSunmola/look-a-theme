@@ -19,6 +19,7 @@ params:
   dateFormat: ":date_medium"
   openGraph:
     siteImage: "site-image.png"
+    description: "Override in your hugo.yaml"
   socials:
     - name: "GitHub Logo"
       url: "https://github.com/"
