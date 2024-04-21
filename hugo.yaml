@@ -15,12 +15,17 @@ menus:
       pageRef: "/nav-3"
       weight: 3
 
+taxonomies:
+  tag: tags
+
 params:
   dateFormat: ":date_medium"
   openGraph:
     siteImage: "site-image.png"
     description: "Override in your hugo.yaml"
-  socials:
+  seo:
+    description: "SEO description goes here"
+  socials: # Override all in your hugo.yaml
     - name: "GitHub Logo"
       url: "https://github.com/"
       image: "images/github-logo.svg"
@@ -32,19 +37,8 @@ params:
     - name: "Facebook Logo"
       url: "https://www.facebook.com/"
       image: "images/facebook-logo.svg"
-  cloudflare:
-    # https://developers.cloudflare.com/turnstile/troubleshooting/testing/
-    dev:
-      turnstileSiteKey: "1x00000000000000000000AA" # For testing, provided by cloudflare
-
   formActions:
     contact: "#"
-
-  seo:
-    description: "Site description goes here"
-
-taxonomies:
-  tag: tags
 
 module:
   hugoVersion:
