@@ -1,7 +1,7 @@
 {{ define "main" }}
 <h1 class="text-center">Get in touch with me</h1>
 
-<form class="row g-3" method="POST" action="/api/contact">
+<form class="row g-3" method="POST" action="{{ .Site.Params.formActions.contact }}">
 	<div class="col-12 col-lg-6">
 		<div class="form-floating">
 			<input type="text" class="form-control" id="name" name="name"

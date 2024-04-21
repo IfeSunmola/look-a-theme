@@ -33,6 +33,10 @@ params:
     # https://developers.cloudflare.com/turnstile/troubleshooting/testing/
     dev:
       turnstileSiteKey: "1x00000000000000000000AA" # For testing, provided by cloudflare
+
+  formActions:
+    contact: "#"
+
   seo:
     description: "Site description goes here"
 
