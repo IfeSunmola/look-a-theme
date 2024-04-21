@@ -11,9 +11,9 @@
 	<meta property="og:title" content="{{ . }}">
 {{- end }}
 
-{{- if or .IsPage .IsSection}}
+{{ if not .IsHome }}
 	<meta property="og:description" content="{{ .Params.openGraph.description }}">
-{{ else if .IsHome }}
+{{ else }}
 	<meta property="og:description" content="{{ site.Params.openGraph.description }}">
 {{ end }}
 
