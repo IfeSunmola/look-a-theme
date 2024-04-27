@@ -1,7 +1,7 @@
 ---
 title: '{{ replace .File.ContentBaseName "-" " " | title }}'
-date: '{{ time.Now.Format "2006-01-02" }}' # YYYY-MM-DD
-lastmod: '{{ time.Now.Format "2006-01-02" }}'
+date: '{{ time.Now.Format "2006-01-02T15:04" }}' # YYYY-MM-DDTHH:MM
+lastmod: '{{ time.Now.Format "2006-01-02T15:04" }}'
 draft: true
 params:
   author: "Ife Sunmola"
@@ -15,3 +15,4 @@ summary: ""
 tags: [ . ]
 ---
 
+2024-04-26T21:08:00
