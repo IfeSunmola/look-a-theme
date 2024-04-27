@@ -21,7 +21,6 @@ taxonomies:
 params:
   dateFormat: ":date_medium"
   openGraph:
-    siteImage: "site-image.png"
     description: "Override in your hugo.yaml"
   seo:
     description: "SEO description goes here"
