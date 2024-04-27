@@ -39,6 +39,21 @@ params:
       image: "images/facebook-logo.svg"
   formActions:
     contact: "#"
+  giscus: # See: https://giscus.app/-
+    repo: "YourGitHubUsername/YourGitHubRepo"
+    repoId: "YourGitHubRepoId"
+    category: "YourCategory"
+    categoryId: "YourCategoryId"
+    mapping: "pathname"
+    strict: "0"
+    reactionsEnabled: "1"
+    emitMetadata: "0"
+    inputPosition: "top"
+    theme: "dark"
+    language: "en"
+    loading: "lazy"
+    crossOrigin: "anonymous"
+    async: "true"
 
 module:
   hugoVersion:

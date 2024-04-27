@@ -1,0 +1,61 @@
+<!--See: https://giscus.app/-->
+<script defer src="https://giscus.app/client.js"
+
+				{{ with .Site.Params.giscus.repo }}
+				data-repo="{{ . }}"
+				{{ end }}
+
+				{{ with .Site.Params.giscus.repoId }}
+				data-repo-id="{{ . }}"
+				{{ end }}
+
+				{{ with .Site.Params.giscus.category }}
+				data-category="{{. }}"
+				{{ end }}
+
+				{{ with .Site.Params.giscus.categoryId }}
+				data-category-id="{{. }}"
+				{{ end }}
+
+				{{ with .Site.Params.giscus.mapping }}
+				data-mapping="{{. }}"
+				{{ end }}
+
+				{{ with .Site.Params.giscus.strict }}
+				data-strict="{{ . }}"
+				{{ end }}
+
+				{{ with .Site.Params.giscus.reactionsEnabled }}
+				data-reactions-enabled="{{ . }}"
+				{{ end }}
+
+				{{ with .Site.Params.giscus.emitMetadata }}
+				data-emit-metadata="{{. }}"
+				{{ end }}
+
+				{{ with .Site.Params.giscus.inputPosition }}
+				data-input-position="{{. }}"
+				{{ end }}
+
+				{{ with .Site.Params.giscus.theme }}
+				data-theme="{{ . }}"
+				{{ end }}
+
+				{{ with .Site.Params.giscus.language }}
+				data-lang="{{ . }}"
+				{{ end }}
+
+				{{ with .Site.Params.giscus.loading }}
+				data-loading="{{ . }}"
+				{{ end }}
+
+				{{ with .Site.Params.giscus.crossOrigin }}
+				crossorigin="{{ . }}"
+				{{ end }}
+
+
+				{{ with .Site.Params.giscus.async }}
+				async="{{ . }}"
+				{{ end }}
+>
+</script>
