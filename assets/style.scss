@@ -116,10 +116,27 @@ p, ul { // specifying so code blocks don't get affected
   }
 }
 
-#markdown-content pre {
-  @extend .bg-dark;
-  @extend .rounded-3;
-  @extend .p-3;
-  @extend .overflow-auto;
-  @extend .text-light;
+#markdown-content {
+  pre {
+    @extend .bg-dark;
+    @extend .rounded-3;
+    @extend .p-2;
+    @extend .overflow-auto;
+    @extend .text-light;
+  }
+
+  code {
+    @extend .bg-dark;
+    @extend .rounded-3;
+  }
+
+  blockquote {
+    @extend .border-start;
+    @extend .ps-3;
+    @extend .pe-3;
+    @extend .text-muted;
+    @extend .border-light;
+    @extend .border-3;
+  }
+
 }
