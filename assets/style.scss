@@ -65,30 +65,13 @@ $pagination-active-border-color: tint-color($pagination-active-bg, 35%);
 
 // 8. Add additional custom code here
 
-#table-of-content > #content {
-  ul {
-    @extend .d-flex, .flex-column, .gap-1;
-    list-style-type: circle;
-
-
-    li {
-      @extend .ps-2;
-      @extend .py-2;
-
-      a {
-        @extend .link-light, .link-offset-2
-      }
-    }
-  }
-}
-
 .nav-link-text {
   @extend .nav-link;
   @extend .text-white
 }
 
 p, ul { // specifying so code blocks don't get affected
-  @extend .lh-lg; // line height
+  line-height: 2.5em;
 }
 
 
@@ -116,6 +99,23 @@ p, ul { // specifying so code blocks don't get affected
   }
 }
 
+#table-of-content > #content {
+  ul {
+    @extend .d-flex, .flex-column, .gap-1;
+    list-style-type: circle;
+
+
+    li {
+      @extend .ps-2;
+
+      a {
+        @extend .link-light, .link-offset-2
+      }
+    }
+  }
+}
+
+
 #markdown-content {
   pre {
     @extend .bg-dark;
@@ -139,4 +139,16 @@ p, ul { // specifying so code blocks don't get affected
     @extend .border-3;
   }
 
+  h2 {
+    width: fit-content;
+    @extend .border-bottom;
+    @extend .border-light;
+    @extend .border-3;
+  }
+
+  h2:not(:first-child) { // all except first h2
+    @extend .pb-1;
+    @extend .mb-4;
+    @extend .mt-5;
+  }
 }
