@@ -6,7 +6,7 @@
 {{- with resources.Get "script.js" }}
   {{- if eq hugo.Environment "development" }}
     {{- with . | js.Build }}
-      <script src="{{ .RelPermalink }}"></script>
+      <script src="{{ .RelPermalink }}" defer></script>
     {{- end }}
   {{- else }}
     {{- $opts := dict "minify" true }}

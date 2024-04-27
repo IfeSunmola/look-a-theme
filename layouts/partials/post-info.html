@@ -1,16 +1,5 @@
 <div class="d-flex gap-2">
-	<time datetime="{{ .Date }}" class="fst-italic">
-		{{ $diff := now.Sub .Lastmod }}
-		{{ $rounded := math.Round (div $diff.Hours 24) }}
-
-		{{ if le $rounded 30 }}
-				{{ if le $rounded 1 }}
-		 {{ $rounded }} day ago
-				{{ else }}
-		 {{ $rounded }} days ago
-				{{ end }}
-		{{ else }}
-		 {{ .Date.Format "January 2, 2006" }}
-		{{ end }}
+	<time datetime="{{ .Date }}" class="fst-italic post-date">
+		{{ .Date | time.Format .Site.Params.dateFormat }}
 	</time>
 </div>
