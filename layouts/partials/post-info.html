@@ -1,13 +1,16 @@
 <div class="d-flex gap-2">
-	<span class="material-symbols-outlined">edit</span>
-	<time datetime="{{ .Date }}">
-		{{ .Date | time.Format .Site.Params.dateFormat }}
+	<time datetime="{{ .Date }}" class="fst-italic">
+		{{ $diff := now.Sub .Lastmod }}
+		{{ $rounded := math.Round (div $diff.Hours 24) }}
+
+		{{ if le $rounded 30 }}
+				{{ if le $rounded 1 }}
+		 {{ $rounded }} day ago
+				{{ else }}
+		 {{ $rounded }} days ago
+				{{ end }}
+		{{ else }}
+		 {{ .Date.Format "January 2, 2006" }}
+		{{ end }}
 	</time>
-	{{ if ne .Date .Lastmod }}
-		<span>|</span>
-		<span class="material-symbols-outlined">history</span>
-		<time datetime="{{ .Lastmod }}">
-			{{ .Lastmod | time.Format .Site.Params.dateFormat }}
-		</time>
-	{{ end }}
 </div>
