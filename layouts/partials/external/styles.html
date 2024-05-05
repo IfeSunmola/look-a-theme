@@ -1,4 +1,4 @@
-{{ $opts := dict "transpiler" "libsass" "targetPath" "style.css" }}
+{{- $opts := dict "transpiler" "libsass" "targetPath" "style.css" }}
 {{- with resources.Get "style.scss" | toCSS $opts }}
   {{- if eq hugo.Environment "development" }}
     <link rel="stylesheet" href="{{ .Permalink }}">

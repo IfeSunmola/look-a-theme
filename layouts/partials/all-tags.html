@@ -1,15 +1,15 @@
 <div class="card p-3">
 	<h2 class="text-center">Tags</h2>
 	<div class="d-flex row-gap-2 column-gap-2 flex-wrap justify-content-evenly">
-		{{ $allTags := .Site.Taxonomies.tags }}
-		{{ if le (len $allTags) 0 }}
+		{{- $allTags := .Site.Taxonomies.tags }}
+		{{- if le (len $allTags) 0 }}
 		<p>Nothing here yet ...</p>
-		{{ else }}
-		{{ range $allTags }}
+		{{- else }}
+		{{- range $allTags }}
 		<a href="{{ .Page.Permalink }}" class="btn btn-primary">
-			{{ .Page.Title }}
+			{{- .Page.Title }}
 		</a>
-		{{ end }}
-		{{ end }}
+		{{- end }}
+		{{- end }}
 	</div>
 </div>

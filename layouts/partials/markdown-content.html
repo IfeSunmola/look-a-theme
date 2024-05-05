@@ -1,12 +1,12 @@
-{{ if eq true .Params.displayToc }}
+{{- if eq true .Params.displayToc }}
 <div class="d-flex flex-column gap-2" id="table-of-content">
 	<h2>Table of Contents</h2>
 	<div id="content">
-		{{ .TableOfContents }}
+		{{- .TableOfContents }}
 	</div>
 </div>
-{{ end }}
+{{- end }}
 
 <article id="markdown-content">
-	{{ .Content }}
+	{{- .Content }}
 </article>

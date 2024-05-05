@@ -2,34 +2,34 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title>
-	{{ if .IsHome }}
-		{{ site.Title }}
-	{{ else }}
-		{{ printf "%s | %s" .Title site.Title }}
-	{{ end }}
+	{{- if .IsHome }}
+		{{- site.Title }}
+	{{- else }}
+		{{- printf "%s | %s" .Title site.Title }}
+	{{- end }}
 </title>
 
-{{ partialCached "external/styles.html" . }}
+{{- partialCached "external/styles.html" . }}
 
 <!--Start SEO-->
 {{/* https://cloudcannon.com/tutorials/hugo-seo-best-practices/ */}}
 {{- if .IsHome -}}
-	<meta name="description" content="{{ site.Params.seo.Description }}" />
+	<meta name="description" content="{{- site.Params.seo.Description }}" />
 {{- else -}}
-	{{ with .Params.Seo }}
-		<meta name="description" content="{{ .Description }}" />
+	{{- with .Params.Seo }}
+		<meta name="description" content="{{- .Description }}" />
 
-		{{ if .NoIndex }}
+		{{- if .NoIndex }}
 			<meta name="robots" content="noindex">
-		{{ end }}
-	{{ end }}
+		{{- end }}
+	{{- end }}
 {{- end }}
 
-<link rel="canonical" href="{{ .Permalink | absURL }}" />
+<link rel="canonical" href="{{- .Permalink | absURL }}" />
 
 <!--End SEO-->
 
-{{ partial "opengraph.html" . }}
+{{- partial "opengraph.html" . }}
 
 <!--Created Icon-->
 <link rel="stylesheet"

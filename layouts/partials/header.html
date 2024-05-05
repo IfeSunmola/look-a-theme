@@ -1,7 +1,7 @@
 <nav class=" container-md navbar navbar-expand-lg bg-primary"
 		 data-bs-theme="dark">
 	<div class="container-fluid">
-		<a class="navbar-brand fs-4" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+		<a class="navbar-brand fs-4" href="{{- .Site.BaseURL }}">{{- .Site.Title }}</a>
 
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
 						data-bs-target="#navbarNav" aria-controls="navbarNav"
@@ -14,9 +14,9 @@
 
 				{{ range site.Menus.nav }}
 				<li class="nav-item">
-					<a class="nav-link-text" href="{{ .URL }}">{{ .Name }}</a>
+					<a class="nav-link-text" href="{{- .URL }}">{{- .Name }}</a>
 				</li>
-				{{ end }}
+				{{- end }}
 
 				{{/*
 				<li class="nav-item">

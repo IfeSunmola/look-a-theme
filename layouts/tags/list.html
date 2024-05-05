@@ -1,6 +1,6 @@
-{{ define "main" }}
+{{- define "main" }}
 <h1 class="text-center">
-	All Posts tagged "{{ .Title }}"
+	All Posts tagged "{{- .Title }}"
 </h1>
-{{ partial "list-of-posts.html" . }}
-{{ end }}
+{{- partial "list-of-posts.html" . }}
+{{- end }}

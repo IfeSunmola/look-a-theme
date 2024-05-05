@@ -1,8 +1,8 @@
 User-agent: *
-{{ range .Pages }}
+{{- range .Pages }}
 {{- if eq hugo.Environment "development" }}
-Disallow: {{ .RelPermalink }}
-{{ else }}
-Allow: {{ .RelPermalink }}
-{{ end }}
-{{ end }}
+Disallow: {{- .RelPermalink }}
+{{- else }}
+Allow: {{- .RelPermalink }}
+{{- end }}
+{{- end }}

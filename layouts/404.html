@@ -1,10 +1,10 @@
-{{ define "main" }}
+{{- define "main" }}
 <div class="h-75">
 	<div class="d-flex flex-column gap-3 justify-content-center align-items-center">
 		<h2 class="text-center">That page wasn't found on this site. </h2>
-		<a class="btn btn-primary btn-lg w-50" href="{{ "" | relURL }}">Go Home ?</a>
+		<a class="btn btn-primary btn-lg w-50" href="{{- "" | relURL }}">Go Home ?</a>
 	</div>
 </div>
 
-{{ end }}
+{{- end }}
 

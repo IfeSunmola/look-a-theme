@@ -1,9 +1,9 @@
 {{/*_self is default, _blank opens in new page */}}
 <a href="{{.Site.BaseURL}}{{.Get `slug`}}"
-	 {{ with  .Get `target` }}
-	 target="."
-	 {{ end }}
+	 {{- with  .Get `target` }}
+	 target="{{- . }}"
+	 {{- end }}
 
 >
-	{{ .Inner }}
+	{{- .Inner }}
 </a>

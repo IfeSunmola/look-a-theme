@@ -1,4 +1,4 @@
-{{ define "main" }}
+{{- define "main" }}
 <h1 class="text-center">Get in touch with me</h1>
 
 <form class="row g-3" method="POST" action="{{ .Site.Params.formActions.contact }}">
@@ -36,14 +36,14 @@
 
 
 
-	{{ with .Site.Params.cloudflare }}
-	{{ if eq hugo.Environment "development" }}
-		 <div class="cf-turnstile text-center" data-sitekey="{{ .dev.turnstileSiteKey }}"></div>
-	{{ else }}
-		<div class="cf-turnstile text-center" data-sitekey="{{ .prod.turnstileSiteKey }}"></div>
-	{{ end }}
+	{{- with .Site.Params.cloudflare }}
+	{{- if eq hugo.Environment "development" }}
+		 <div class="cf-turnstile text-center" data-sitekey="{{- .dev.turnstileSiteKey }}"></div>
+	{{- else }}
+		<div class="cf-turnstile text-center" data-sitekey="{{- .prod.turnstileSiteKey }}"></div>
+	{{- end }}
 
-	{{ end }}
+	{{- end }}
 
 
 	<div class="col-12">
@@ -54,4 +54,4 @@
 
 </form>
 
-{{ end }}
+{{- end }}

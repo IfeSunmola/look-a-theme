@@ -1,5 +1,5 @@
 <div class="d-flex gap-2">
 	<time datetime="{{ .Date }}" class="fst-italic post-date">
-		{{ .Date | time.Format .Site.Params.dateFormat }}
+		{{- .Date | time.Format .Site.Params.dateFormat }}
 	</time>
 </div>

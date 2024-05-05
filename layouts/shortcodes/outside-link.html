@@ -1,13 +1,13 @@
 {{/*nofollow, follow, sponsored */}}
 <a href="{{.Get `url`}}" target="_blank"
-		{{ with .Get `rel` }}
-	 rel="{{ . }}"
-	 {{ end }}
+		{{- with .Get `rel` }}
+	 rel="{{- . }}"
+	 {{- end }}
 
 >
-	{{ with .Inner }}
-		{{ . }}
-	{{ else }}
-		{{ .Get `url`}}
-	{{ end }}
+	{{- with .Inner }}
+		{{- . }}
+	{{- else }}
+		{{- .Get `url`}}
+	{{- end }}
 </a>

@@ -1,15 +1,15 @@
-{{ define "main" }}
+{{- define "main" }}
 <article class="card p-4 d-flex flex-column row-gap-2">
-	{{ partial "page-tags.html" . }}
+	{{- partial "page-tags.html" . }}
 
-	<h1>{{ .Title }}</h1>
+	<h1>{{- .Title }}</h1>
 
-	<p>{{ .Summary }}</p>
+	<p>{{- .Summary }}</p>
 
-	{{ partial "project-info.html" . }}
+	{{- partial "project-info.html" . }}
 
 	<div class="border-bottom mt-2 mb-2"></div>
 
-	{{ partial "markdown-content.html" . }}
+	{{- partial "markdown-content.html" . }}
 </article>
-{{ end }}
+{{- end }}
