@@ -6,4 +6,8 @@
 	<span class="material-symbols-outlined">check_circle</span>
 	<span>Completed</span>
 	{{- end }}
+	<span> | </span>
+	<time datetime="{{ .Date }}" class="fst-italic post-date">
+		{{- .Date | time.Format .Site.Params.dateFormat }}
+	</time>
 </div>

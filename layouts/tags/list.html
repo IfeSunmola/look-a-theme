@@ -2,5 +2,32 @@
 <h1 class="text-center">
 	All Posts tagged "{{- .Title }}"
 </h1>
-{{- partial "list-of-posts.html" . }}
+<div class="row g-4">
+	{{-
+	$allPosts :=
+	(.Paginate (where .RegularPagesRecursive "Kind" "eq" "page" )).Pages
+	}}
+	{{- if le (len $allPosts) 0 }}
+	<p class="text-center d-flex justify-content-center align-items-center fs-2">
+		No posts yet ... Check back later?
+	</p>
+	{{- else }}
+	{{- range $allPosts }}
+	<div class="col-12">
+		<article class="card p-3">
+			{{- partial "page-tags.html" . }}
+
+			<a href=" {{- .Permalink }}" class="text-white text-decoration-none mt-2">
+				<h2>{{- .Title }}</h2>
+			</a>
+
+			<p>{{- .Summary }}</p>
+
+			{{- partial "post-info.html" . }}
+		</article>
+	</div>
+	{{- end }}
+	{{- partial "pagination.html" . }}
+	{{- end }}
+</div>
 {{- end }}
