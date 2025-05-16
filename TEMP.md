@@ -1,3 +1,5 @@
+## Version: hugo v0.124.1+extended
+
 https://cloudcannon.com/blog/the-ultimate-guide-to-hugo-sections/
 
 1. A folder like `content/items` will automatically create a URL for /items
@@ -10,11 +12,15 @@ https://cloudcannon.com/blog/the-ultimate-guide-to-hugo-sections/
 
 # _index.md files
 
-By default, hugo maps the folder structure to its corresponding html file in the /layouts
-folder. E.g. markdown files in `content/blog` will use layout files in `layouts/blog`
+By default, hugo maps the folder structure to its corresponding html file in the
+/layouts
+folder. E.g. markdown files in `content/blog` will use layout files in
+`layouts/blog`
 
-For the cases where a list/single type isn't needed, it can be manually mapped to a
-specific html file. E.g. the `_index.md` in `/content/contAct` directory has the following
+For the cases where a list/single type isn't needed, it can be manually mapped
+to a
+specific html file. E.g. the `_index.md` in `/content/contAct` directory has the
+following
 in its front matter:
 
 ```markdown
@@ -24,9 +30,11 @@ layout: "contact"
 ---
 ```
 
-It tells hugo to look in the `standalone` directory, and use the `contact-form` html file.
+It tells hugo to look in the `standalone` directory, and use the `contact-form`
+html file.
 
-**Unpredicatable/lots of mental gymnastics because of hugo's fall through/look up order
+**Unpredicatable/lots of mental gymnastics because of hugo's fall through/look
+up order
 behaviour**
 
 
@@ -59,7 +67,8 @@ Tag               <- Taxonomy
 
 ## Archetypes
 
-1. Use the default archetype when creating a new directory like /content/blog/ or
+1. Use the default archetype when creating a new directory like /content/blog/
+   or
    /content/projects/
     1. `hugo new content series/_index.md`
 2. Create new tag with the tags archetype:

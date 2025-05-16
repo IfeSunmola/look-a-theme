@@ -1,5 +1,5 @@
 <div class="row g-4">
-	{{- $allPosts := (.Paginate (where .RegularPagesRecursive "Type" "blog" )).Pages }}
+	{{- $allPosts := (.Paginate .RegularPagesRecursive).Pages }}
 	{{- if le (len $allPosts) 0 }}
 	<p class="text-center d-flex justify-content-center align-items-center fs-2">
 		No posts yet ... Check back later?
